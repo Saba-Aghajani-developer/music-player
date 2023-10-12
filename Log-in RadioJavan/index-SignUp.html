@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" href="assets/img/logoo copy.png">
+
+</head>
+<body>
+<main class="w-full bg-gradient-to-b from-red-950 from-10% to-black to-70% bg-red-400">
+    <header class="w-full h-1/6 flex justify-between items-start  ">
+
+        <figure class="w-full h-full">
+            <img class="logo object-cover w-[100px] h-[100px] ml-5 text-white" src="assets/img/2%20copy.png" alt="logo">
+        </figure>
+
+        <button class="btn w-20 h-2/6 bg-white rounded-md mr-5 mt-5 underline">
+            <a class="text-md font-medium" href="index-LogIn.html">Log in</a>
+        </button>
+    </header>
+    <!--             `coded BY Hamid khaledian instagram : @hamideveloper-->
+    <section class="w-full h-screen flex justify-center items-center ">
+        <form id="form" class="form w-2/5 h-4/5 flex flex-wrap justify-center content-between ">
+
+            <h2 class=" w-full h-1/6 text-white text-center text-4xl font-bold flex justify-center items-center">Sign up
+                For New Account</h2>
+
+            <div class="form_control w-full">
+                <label class="w-full h-12 flex justify-start items-center border-2 border-white rounded-lg text-lg">
+                    <img class="w-1/12 h-3/4" src="assets/img/fullName.svg" alt="fullName">
+                    <input placeholder="Full name" type="text" id="fullName" class="w-11/12 h-full ps-1 text-white text-sm backdrop-blur-sm bg-white/5">
+                </label>
+            </div>
+
+            <div class="form_control w-full">
+                <label class="w-full h-12 flex justify-start items-center border-2 border-white rounded-lg text-lg">
+                    <img class="w-1/12 h-3/4" src="assets/img/email.svg" alt="email">
+                    <input placeholder="Email" type="email" name="email" id="email" class="w-11/12 h-full ps-1 text-white text-sm backdrop-blur-sm bg-white/5">
+                </label>
+            </div>
+
+            <div class="form_control w-full">
+                <label class="w-full h-12 flex justify-start items-center border-2 border-white rounded-lg text-lg">
+                    <img class="w-1/12 h-3/4" src="assets/img/lock.svg" alt="password">
+                    <input placeholder="Password" type="password" id="password" class="w-11/12 h-full ps-1 text-white text-sm backdrop-blur-sm bg-white/5">
+                </label>
+            </div>
+
+            <div class="form_control w-full">
+                <label class="w-full h-12 flex justify-start items-center border-2 border-white rounded-lg text-lg">
+                    <img class="w-1/12 h-3/4" src="assets/img/username.svg" alt="username">
+                    <input placeholder="Username" type="text" id="username" class="w-11/12 h-full ps-1 text-white text-sm backdrop-blur-sm bg-white/5">
+                </label>
+            </div>
+
+            <div class="w-full  h-12 sm:h-2 flex justify-center items-center text-slate-400 ">By signing up,you agree to our
+                
+                <a class="text-sm text-white hover:underline transition-[0.6s] px-1" href="#">Terms of Use </a>
+                and 
+                <a class="text-sm text-white hover:underline transition-[0.6s] ps-1" href="#">Privacy Policy.</a>
+            </div>
+
+            <button  type="submit" onclick="submitHandler(e)" class="w-full h-12 bg-white font-medium rounded-lg">
+                Sign up
+            </button>
+        </form>
+    </section>
+</main>
+<script>
+    let inputForm = document.getElementById("form")
+    let inputFullName = document.getElementById("fullName")
+    let inputEmail = document.getElementById('email')
+    let inputPassword = document.getElementById("password")
+    let inputUsername = document.getElementById("username")
+
+    inputForm.addEventListener('submit' ,(e) => {
+        e.preventDefault()
+    })
+    inputFullName.addEventListener("keyup" , (e) => {
+            if((e.target.value).length >= 3){
+                inputFullName.style.color = "green"
+                inputFullName.parentElement.style.border= "1px solid green "
+            }else{
+                inputFullName.style.color = "red"
+                inputFullName.parentElement.style.border= "1px solid red "
+            }
+        })
+        inputEmail.addEventListener("keyup" , (e) => {
+            if((e.target.value).length >= 6 ){
+                inputEmail.style.color = "green"
+                inputEmail.parentElement.style.border= "1px solid green "
+            }else{
+                inputEmail.style.color = "red"
+                inputEmail.parentElement.style.border= "1px solid red "
+            }
+        })
+        inputPassword.addEventListener("keyup" , (e) => {
+            if((e.target.value).length >= 8){
+                inputPassword.style.color = "green"
+                inputPassword.parentElement.style.border= "1px solid green "
+            }else{
+                inputPassword.style.color = "red"
+                inputPassword.parentElement.style.border= "1px solid red"
+            }
+        })
+        inputUsername.addEventListener("keyup" , (e) => {
+            if((e.target.value).length >= 5){
+                inputUsername.style.color = "green"
+                inputUsername.parentElement.style.border= "1px solid green "
+            }else{
+                inputUsername.style.color = "red"
+                inputUsername.parentElement.style.border= "1px solid red"
+            }
+        })
+        function submitHandler(e){
+            let valueInputFullName = inputFullName.value
+            let valueInputEmail = inputEmail.value
+            let valueInputPassword = inputPassword.value
+            let valueInputUsername = inputUsername.value
+
+            if(valueInputPassword.length >= 8 && valueInputEmail.length >=6 && valueInputFullName.length >=3 && valueInputUsername.length >=5 ){
+                 
+                // passwords
+                inputPassword.style.color = "green"
+                inputPassword.parentElement.style.border= "1px solid green "
+
+                // emails 
+                inputEmail.style.color = "green"
+                inputEmail.parentElement.style.border= "1px solid green "
+
+                // fullname 
+                inputFullName.style.color = "green"
+                inputFullName.parentElement.style.border= "1px solid green "
+
+                // username 
+                inputUsername.style.color = "green"
+                inputUsername.parentElement.style.border= "1px solid green "
+
+            }else{
+                inputEmail.style.color = "red"
+                inputEmail.parentElement.style.border= "1px solid red "
+
+                inputPassword.style.color = "red"
+                inputPassword.parentElement.style.border= "1px solid red"
+
+                inputFullName.style.color = "red"
+                inputFullName.parentElement.style.border= "1px solid red"
+
+                inputUsername.style.color = "red"
+                inputUsername.parentElement.style.border= "1px solid red"
+            }
+        }
+</script>
+</body>
+</html>

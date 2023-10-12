@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" href="assets/img/logoo copy.png">
+
+</head>
+<body>
+<main class="w-full h-screen bg-gradient-to-b from-red-950 from-10% to-black to-70%">
+    <header class="w-full h-1/6 flex justify-between items-start">
+
+        <figure class="w-full h-full">
+            <img class="logo h-full ml-5 text-white" src="assets/img/2%20copy.png" alt="logo">
+        </figure>
+
+        <button class="btn w-60 h-2/6 bg-white rounded-md mr-5 mt-5 underline">
+            <a class="text-sm font-medium" href="index-SignUp.html">Sign Up For New Account</a>
+        </button>
+    </header>
+    <!--                coded BY Hamid khaledian instagram : @hamideveloper-->
+    <section class="w-full h-5/6 flex justify-center items-center">
+        <form class="w-2/5 h-4/5 flex flex-wrap justify-center content-between">
+            <h2 class=" w-full h-1/6 text-white text-center text-4xl font-bold flex justify-center items-center">Log
+                in</h2>
+
+            <div class="form_control w-full">
+                <label class="w-full h-12 flex justify-start items-center border-2 border-white rounded-lg text-lg">
+                    <img class="w-1/12 h-3/4" src="assets/img/email.svg" alt="email">
+                    <input placeholder="Email" type="email" name="email" id="email"
+                           class="w-11/12 h-full ps-1 text-white text-sm backdrop-blur-sm bg-white/5">
+                </label>
+            </div>
+
+            <div class="form_control w-full">
+                <label class="w-full h-12 flex justify-start items-center border-2 border-white rounded-lg text-lg">
+                    <img class="w-1/12 h-3/4" src="assets/img/lock.svg" alt="password">
+                    <input placeholder="Password" name="password" type="password" id="password"
+                           class="w-11/12 h-full ps-1 text-white text-sm backdrop-blur-sm bg-white/5">
+                </label>
+            </div>
+
+            <div class="w-full h-12 flex justify-end items-center underline">
+                <a class="text-sm text-slate-500 hover:text-white transition-[0.6s]" href="ForgotPassword.html">FORGOT
+                    PASSWORD?</a>
+            </div>
+
+            <button type="submit"  onclick="submitHandler()" class="w-full h-12 bg-white font-medium rounded-lg">
+                Log in
+            </button>
+        </form>
+    </section>
+</main>
+</body>
+<script>
+    let inputForm = document.getElementById("form")
+    let inputEmail = document.getElementById("email")
+    let inputPassword = document.getElementById("password")
+
+    inputForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+    })
+
+    inputEmail.addEventListener("keyup", (e) => {
+        if ((e.target.value).length >= 6) {
+            inputEmail.style.color = "green"
+            inputEmail.parentElement.style.border = "1px solid green "
+        } else {
+            inputEmail.style.color = "red"
+            inputEmail.parentElement.style.border = "1px solid red "
+        }
+    })
+
+    inputPassword.addEventListener("keyup", (e) => {
+        if ((e.target.value).length >= 8) {
+            inputPassword.style.color = "green"
+            inputPassword.parentElement.style.border = "1px solid green "
+        } else {
+            inputPassword.style.color = "red"
+            inputPassword.parentElement.style.border = "1px solid red"
+        }
+    })
+
+    function submitHandler(e) {
+        let valueInputEmail = inputEmail.value
+        let valueInputPassword = inputPassword.value
+
+        if (valueInputPassword.length >= 8 && valueInputEmail.length >= 6) {
+
+            // passwords
+            inputPassword.style.color = "green"
+            inputPassword.parentElement.style.border = "1px solid green "
+
+            // emails
+            inputEmail.style.color = "green"
+            inputEmail.parentElement.style.border = "1px solid green "
+        } else {
+
+            inputEmail.style.color = "red"
+            inputEmail.parentElement.style.border = "1px solid red "
+
+            inputPassword.style.color = "red"
+            inputPassword.parentElement.style.border = "1px solid red"
+        }
+    }
+</script>
+</html>
