@@ -1,0 +1,353 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -100;
+    position: fixed;
+    top: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14%;
+}
+
+.main>img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    display: none;
+
+}
+
+.body>div>article {
+    width: 500px;
+    height: 430px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(28px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 15px #00000080;
+    position: relative;
+    border-radius: 2px;
+}
+
+.text {
+    width: 280px;
+    height: 85%;
+    position: absolute;
+    left: 0;
+    top: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.text>h2,
+.text>h3 {
+    width: 100%;
+    height: 20%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.text>h3 {
+    font-weight: 300;
+}
+
+.text>.playerBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.playerBox>.keys {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keys>span {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.keys>span>svg {
+    color: #333;
+}
+
+.keys>span:nth-of-type(1)>svg {
+    transform: rotate(180deg);
+}
+
+.keys>span:nth-of-type(2)>svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+}
+
+.keys>span:nth-of-type(2)>svg:nth-of-type(2) {
+    display: none;
+}
+
+.playerBox>.timeLine {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timeLine>.line {
+    width: 240px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.timeLine>#time {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+
+    >div:first-of-type {
+        margin-right: 80px;
+    }
+
+    >div:nth-of-type(2),
+    >div:nth-of-type(3) {
+        margin: 0 2px;
+    }
+}
+
+.timeLine>.line>span {
+    width: 1%;
+    height: 7px;
+    /* background-color: #912525; */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 280px;
+    top: 40px;
+    z-index: 10;
+    overflow: hidden;
+    box-shadow: 0 10px 15px #00000080;
+
+}
+
+.img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+
+}
+
+.cd {
+    width: 345px;
+    height: 345px;
+    position: absolute;
+    left: 440px;
+    top: 42px;
+    background-image: url(./img/vinyl.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0px 25px #00000080;
+
+}
+
+.animetion {
+    animation: rot 2.5s linear infinite;
+
+}
+
+.cd>img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#close {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%);
+    border-radius: 50%;
+
+}
+
+#close>svg {
+    color: #ffffff;
+    cursor: pointer;
+    transform: translateX(-10%);
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:687px) {
+    .main {
+        width: 100%;
+        height: 100vh;
+        margin: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .body>div>article {
+        margin-top: 120px;
+        width: 370px;
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .text {
+        width: 100%;
+        height: 150px;
+        left: 0;
+        top: 310px;
+    }
+
+    .text>h2,
+    .text>h3 {
+        height: 20%;
+        font-size: 18px;
+    }
+
+    .text>.playerBox {
+        height: 60%;
+    }
+
+    .keys>span {
+        width: 35px;
+        height: 35px;
+        margin: 0 10px;
+    }
+
+    .keys>span>svg {
+        width: 65%;
+    }
+
+    .timeLine>.line {
+        width: 240px;
+    }
+
+    .img {
+        width: 320px;
+        height: 310px;
+        left: 25px;
+        top: -20px;
+        z-index: 10;
+        overflow: hidden;
+        box-shadow: 0 10px 15px #00000080;
+
+    }
+
+    .cd {
+        width: 280px;
+        height: 280px;
+        left: 45px;
+        top: -145px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+}

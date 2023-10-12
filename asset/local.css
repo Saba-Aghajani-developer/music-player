@@ -1,0 +1,166 @@
+@media screen and (max-width: 768px) {
+   main>ul {
+      display: none;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%);
+   }
+
+   main>div {
+      width: 100%;
+   }
+
+   main>div>nav {
+      width: 100%;
+      height: 70px;
+      border-bottom: 1px solid #232323;
+      display: flex;
+      background-color: black;
+
+   }
+
+   main>div>nav>span {
+      width: 10%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   main>div>nav>div {
+      width: 45%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   main>div>nav>div:nth-of-type(1)>input {
+      display: none;
+   }
+
+   main>div>section>div>div:nth-of-type(3)>ul {
+      width: 50%;
+   }
+
+}
+
+/* mobile */
+
+
+@media screen and (min-width: 769px) {
+   main>ul {
+      display: none;
+   }
+
+   main>div {
+      width: 100%;
+   }
+
+   main>div>nav {
+      width: 100%;
+      height: 70px;
+      background-color: black;
+      border-bottom: 1px solid #232323;
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   main>div>nav>span {
+      width: 10%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   main>div>nav>div {
+      width: 45%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   .swiper-slide {
+      width: 50% !important;
+   }
+
+}
+
+
+
+/* tablet */
+@media screen and (min-width: 992px) {
+   main>ul {
+      display: block;
+      width: 25%;
+      height: 100vh;
+      list-style: none;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%);
+   }
+
+   main>ul>li {
+      width: 100%;
+      height: 50px;
+      border: 1px solid rgba(95, 170, 170, 0.133);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   main>ul>li>a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      text-decoration: none;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      color: white;
+   }
+
+   /* main>ul>li:nth-of-type(2)>a {
+      background-color: #121212;
+   } */
+
+   main>ul>li>a:hover {
+      background-color: #260505;
+   }
+
+   main>div {
+      width: 75%;
+      transform: translateX(33.2%);
+   }
+
+   main>div>nav {
+      width: 100%;
+      height: 70px;
+      background-color: black;
+      border-bottom: 1px solid #232323;
+      display: flex;
+      flex-wrap: wrap;
+
+   }
+
+   main>div>nav>span {
+      display: none;
+   }
+
+   main>div>nav>div {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   .swiper-slide {
+      width: 25% !important;
+   }
+
+
+}
+
+
+
+/* desktop */
+@media screen and (min-width: 1200px) {}
+
+/* big */
