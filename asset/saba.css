@@ -164,8 +164,8 @@
 .timeLine>.line>span {
     width: 1%;
     height: 7px;
-    /* background-color: #912525; */
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%);
+    background-color: #333;
+/*     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%); */
     position: absolute;
     top: 0;
     left: 0;
@@ -252,13 +252,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%);
+/*     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(97, 5, 9, 1) 66%, rgba(113, 1, 1, 1) 100%); */
+    background-color: #fff;
     border-radius: 50%;
 
 }
 
 #close>svg {
-    color: #ffffff;
+    color: #333;
     cursor: pointer;
     transform: translateX(-10%);
 }
