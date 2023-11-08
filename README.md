@@ -5,6 +5,8 @@
 
 
 - [Demo Project](https://saba-aghajani-developer.github.io/music-player/)
+  
+- Group Project with [Mobina Daneshvar](https://github.com/mobinadanshvarweb) and [Hamid Khaledian](https://www.linkedin.com/in/hamid-khaledian-b7395027a)
 
 - Developed by Saba Aghajani
   
