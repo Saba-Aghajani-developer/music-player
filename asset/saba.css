@@ -352,6 +352,7 @@
         width: 60px;
         height: 60px;
         top: 5px;
-    left: 5px;
+        left: 5px;
+        display:none;
     }
 }
