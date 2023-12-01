@@ -16,7 +16,7 @@ document.getElementById('play').addEventListener('click', () => {
         document.getElementById('pause').style.display = 'flex'
         document.getElementsByClassName('cd')[0].classList.add('animetion')
 
-        time = audio[turn].duration
+        time = Number(audio[turn].duration)
     } else {
         document.getElementById('start').style.display = 'flex'
         document.getElementById('pause').style.display = 'none'
@@ -64,7 +64,7 @@ line.addEventListener('mouseup', () => {
 
 // time 
 let set1 = setInterval(() => {
-    y = audio[turn].currentTime
+    y = Number(audio[turn].currentTime)
     x = ((y * 100) / time)
     if (y < time) {
         document.getElementById('timeLineChild').style.width = x + 1 + '%';
