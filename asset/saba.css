@@ -145,7 +145,7 @@
     width: 240px;
     height: 50px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
@@ -349,7 +349,9 @@
     }
 
     .logo {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
+        top: 5px;
+    left: 5px;
     }
 }
